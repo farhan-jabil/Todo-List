@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import TodoItem from './TodoItem'
 
 export default function Todos(props) {
@@ -21,7 +21,7 @@ export default function Todos(props) {
   // }
 
   return (
-    <div className='container mt-3'>
+    <div className='container mt-3 w-50'>
       <h3 className='text-center'>Todo list</h3>
       {props.todoItems.length === 0 ? "Nothing to do!" :
         props.todoItems.map((items) => {
@@ -29,16 +29,5 @@ export default function Todos(props) {
           })
       }
     </div>
-
-    // <div className="container">
-    //   <h3 className="my-3">Todos List</h3>
-    //   {props.todos.length === 0 ? "No Todos to display" :
-    //     props.todos.map((todo) => {
-    //       console.log(todo.sno);
-    //       return (<TodoItem todo={todo} key={todo.sno} onDelete={props.onDelete} />
-    //       )
-    //     })
-    //   }
-    // </div>
   )
 }
