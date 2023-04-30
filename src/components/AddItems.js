@@ -39,10 +39,10 @@ export default function AddItems(props) {
     }
     
     return (
-        <div>
+        <div className='pt-5'>
             <h3 className='text-center'>Add a todo</h3>
             <form action="" onSubmit={submit}>
-                <div className="mx-auto w-50">
+                <div className="mx-auto w-50 mt-3">
                     <div className="">
                         <div className="form-outline form-white mb-4">
                             <label className="form-label" htmlFor="title">Title</label>
@@ -54,7 +54,7 @@ export default function AddItems(props) {
                         </div>
                     </div>
                     <div className="">
-                        <button type="submit" className="btn btn-outline-primary mb-4 mx-auto">
+                        <button type="submit" className="btn btn-outline-primary btn-sm mb-4 mx-auto">
                             Add todo
                         </button>
                     </div>

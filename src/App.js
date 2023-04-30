@@ -49,9 +49,9 @@ function App() {
 
   return (  
     <>
-      <Header searchBar={false} />
-      <AddItems addTodo={addTodo}/>
-      <Todos todoItems={todoItems} onDelete={onDelete}/>
+      {/* <Header searchBar={false} /> */}
+      {/* <AddItems addTodo={addTodo}/> */}
+      <Todos todoItems={todoItems} onDelete={onDelete} addTodo={addTodo}/>
       <Footer />
     </>
   );

@@ -1,5 +1,6 @@
 import React from 'react'
 import TodoItem from './TodoItem'
+import AddItems from './AddItems'
 
 export default function Todos(props) {
 
@@ -21,8 +22,10 @@ export default function Todos(props) {
   // }
 
   return (
-    <div className='container mt-3 w-50'>
-      <h3 className='text-center'>Todo list</h3>
+    <div className='mt-5 w-50 mx-auto'>
+      <i className="fa-solid fa-circle-plus fa-2x float-end"></i>
+      <AddItems addTodo={props.addTodo}/>
+      <h3 className='text-center my-5'>Todo list</h3>
       {props.todoItems.length === 0 ? "Nothing to do!" :
         props.todoItems.map((items) => {
             return <TodoItem todoItems={items} key={items.sno} onDelete={props.onDelete} />
