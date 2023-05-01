@@ -1,7 +1,5 @@
 import './App.css';
 import Footer from './components/Footer';
-import Header from './components/Header';
-import AddItems from './components/AddItems';
 import Todos from './components/Todos';
 import { useEffect, useState } from 'react';
 
@@ -51,6 +49,7 @@ function App() {
     <>
       {/* <Header searchBar={false} /> */}
       {/* <AddItems addTodo={addTodo}/> */}
+      <h2 className='text-center mt-5'>My Todos</h2>
       <Todos todoItems={todoItems} onDelete={onDelete} addTodo={addTodo}/>
       <Footer />
     </>
