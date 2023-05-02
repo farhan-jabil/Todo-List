@@ -22,7 +22,7 @@ export default function Todos(props) {
   // }
 
   const [addTodo, setAddTodo] = useState("none");
-  const [addButtonIcon, setAddButtonIcon] = useState("plus")
+  const [addButtonIcon, setAddButtonIcon] = useState("plus");
 
   const addTodoButton = () => {
     if (addTodo === "none") {
@@ -38,7 +38,7 @@ export default function Todos(props) {
   return (
     <div className='container mt-5 mx-auto'>
       <div className=''>
-        <i className={`fa-solid fa-circle-${addButtonIcon} fa-2x float-end`} onClick={addTodoButton}></i>
+        <i className={`fa-solid fa-circle-${addButtonIcon} fa-2x float-end`} onClick={addTodoButton} data-bs-toggle="tooltip" data-bs-placement="top" title="Add Todo"></i>
       </div>
       <div className={`addingTodo d-${addTodo}`}>
         <AddItems addTodo={props.addTodo} />
