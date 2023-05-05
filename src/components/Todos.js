@@ -38,6 +38,7 @@ export default function Todos(props) {
   return (
     <div className='container mt-5 mx-auto'>
       <div className=''>
+        <button type="button" className="btn btn-danger" onClick={props.allClear}>Clear all</button>
         <i className={`fa-solid fa-circle-${addButtonIcon} fa-2x float-end`} onClick={addTodoButton} data-bs-toggle="tooltip" data-bs-placement="top" title="Add Todo"></i>
       </div>
       <div className={`addingTodo d-${addTodo}`}>
@@ -47,7 +48,7 @@ export default function Todos(props) {
         <h3 className='text-center my-5'>Todo list</h3>
         {props.todoItems.length === 0 ? "Nothing to do!" :
           props.todoItems.map((items) => {
-            return <TodoItem todoItems={items} key={items.sno} onDelete={props.onDelete} />
+            return <TodoItem todoItems={items} key={items.sno} changeCheckState={props.changeCheckState} onDelete={props.onDelete} />
           })
         }
       </div>
