@@ -38,7 +38,7 @@ export default function Todos(props) {
   return (
     <div className='container mt-5 mx-auto'>
       <div className=''>
-        <button type="button" className="btn btn-danger" onClick={props.allClear}>Clear all</button>
+        {/* <button type="button" className="btn btn-danger" onClick={props.allClear}>Clear all</button> */}
         <i className={`fa-solid fa-circle-${addButtonIcon} fa-2x float-end`} onClick={addTodoButton} data-bs-toggle="tooltip" data-bs-placement="top" title="Add Todo"></i>
       </div>
       <div className={`addingTodo d-${addTodo}`}>

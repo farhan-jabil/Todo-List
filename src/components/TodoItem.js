@@ -33,25 +33,6 @@ export default function TodoItem(props) {
     );
   };
 
-  // let boxes = document.getElementsByClassName('todoCheckClass').length + 1;
-  // console.log(boxes)
-
-  // const save = () =>  {
-  //   for(let i = 1; i <= boxes; i++){
-  //     let checkbox = document.getElementById(`${`checkboxId` + i}`);
-  //     localStorage.setItem("checkbox" + i, checkbox.checked);	
-  //   }
-  // }
-
-  // for(let i = 1; i <= boxes; i++){
-  //   if(localStorage.length > 0){
-  //     let checked = JSON.parse(localStorage.getItem(i));
-  //     document.getElementById(`${`checkboxId` + props.todoItems.sno}`).checked = checked;
-  //   }
-  // }
-  // window.addEventListener('change', save);
-  // console.log(document.getElementsByClassName('todoCheckClass').length)
-
   const [selected, setSelected] = useState(localStorage.getItem(`checkBox${props.todoItems.sno}`) === 'true');
 
   return (
@@ -81,4 +62,3 @@ export default function TodoItem(props) {
   )
 }
 
-{/* <input className="todoCheckClass form-check-input" type="checkbox" id={`${`checkboxId` + props.todoItems.sno}`} /> */}
